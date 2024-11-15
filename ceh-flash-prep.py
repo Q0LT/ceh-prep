@@ -43,14 +43,27 @@ concepts = {
         "Threat Intelligence Lifecycle"
     ],
     "Laws":[
-        "PCI DSS",
+        "PCI DSS", 
+        #It’s like the bodyguard for payment data, making sure companies don’t treat your credit card numbers like soggy Taco Bell receipts. 
+        #If you’re storing credit info like a psycho, this is the “Hey, you gotta stop that” protocol.
         "ISO/IEC 27001:2013",
+        #International gold star for olks who keps secrets
         "HIPPA",
+        #Hospitals and clinics have to keep your records under wraps—or else! 
         "SOX",
+        #Tattletale mechanism for keeping execs honest about their bank statements
+        #Made for catching number-fudgers and protecting shareholders and the public from accounting errors and fraudulent pracices, primarily in publicly traded companies
         "DMCA",
+        #DMCA’s the law that says, “Hey, quit pirating,” but all it does is make pirates more creative.
+        #Download comes with a “cease and desist” letter. 
         "FISMA",
+        #Don't Mess With Uncle Sam's Computer Files Act
+        #All about keeping federal information systems and safeguard data handled by federal agencies and their contractors safer than the recipe for Coca-Cola
         "GDPR",
+        #EU saying we know what you're up to Google and we're not having it.
+        #Gives users right to be forgotten, and breaches should be reported before you can finish saying 'oops'(72 hours)  
         "DPA 2018"
+        #GDPR but with extra British flair for post-Brexit life
     ],
 }
 
