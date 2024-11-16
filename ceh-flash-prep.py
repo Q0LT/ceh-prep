@@ -3,11 +3,30 @@ import random
 concepts = {
     "Cryptography": [
         "Symmetric Cryptography",
+        #One key, two key, same key to rule them all! 
+        #Encryption/Decryption twins
+        #Pros it's speedy, but key distribution and scalability aren't as cool here
+        #Algorithms: AES, DES, Blowfish
         "Asymmetric Cryptography",
+        #Two keys, one heart
+        #Encryption: You grab the recipient’s public key, then lock it up so tight only their private key can open it.
+        #Digital signatures: Use your private key to slap on a "this is definitely me" sticker, and everyone with your public key gets to verify you’re not full of it.
+        #Safe sharing, but slow as dial-up in the 90s
+        #Algorithms: RSA, ECC
         "RC Family Encryption",
+        #The RC Clan
+        #Algorithms built for speed and efficiency
         "RSA",
+        #The big-shot asymmetric algorithm, RSA is everywhere
+        #Built on prime numbers so big, even your calculator's scared
+        #SSl/TLS, digital certs, signing things people knows it's legit
         "Diffie-Hellman",
+
         "Message Digest Functions",
+        #Hash is out
+        #Produces a little 'hash' of your data so you can say 'Ya nothin changed'. Like a digital fingerprint
+        #One way trip baby, no going back to the original data
+        #MD5, MD6-not the cool kids, SHA super cool
         "MD5",
         "MD6",
         "SHA",
