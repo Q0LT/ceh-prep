@@ -28,16 +28,45 @@ concepts = {
         #One way trip baby, no going back to the original data
         #MD5, MD6-not the cool kids, SHA super cool
         "MD5",
+        #The Fragile One, vulnerable to collisions (two different things could get the same hash, which is a big no-no)
         "MD6",
+        #Tried to be the MDs family's comeback kid by fixing MD5's flaws
+        #Flexible output lengths, but wasn't crowned king
         "SHA",
+        #Family of hash functions designed to keep things airtight in integrity checks
+        #SHA-1? Outdated. SHA-2 and SHA-3? Still strutting around, make sure it's 256 at least
         "Public Key Infrastructure",
+        #The Certificate Mafia
+        #The Certificate Authority(the boss) issues certificates, a Registration Authority(the bouncer) for verification, and a repository(the safe) for storage
+        #Essential in SSL/TLS, secure email, and VPNs for identify verification and data encryption-anywhere trust is a must
         "Signed Certificate",
+        #A certificate that says, "I'm official", issued by a trusted Certificate Authority, provides assurance of authority
+        #Holds public key and identity details with the CA’s digital seal of approval
+        #SSL/TLS
         "Self Signed Certificate",
+        #DIY Security, homemade certificate
+        #Created and signed by the entity using it
+        #Free and fast, but like having your mom as a reference on your resume. 
         "Digital Signature",
+        #Cyber John Hancock
+        #Confirms you're the real deal and haven't been tampered with
+        #Signed with your private key, verified with your public key
+        #Emails, software, contracts—anywhere you don’t want fraudsters playing pretend.
         "SSL",
+        #Protocol for encrypting internet traffic, providing security for data transmitted over the network
+        #Used to be the internet’s bodyguard, encrypting data between users and websites.
+        #Replaced by TLS because SSLv2 and SSLv3 were weaklings in the cryptographic gym.
         "TLS",
+        #SSL's beefed up successor
+        #Symmetric and asymmetric encryption plus certificates. Triple whammy of security.
         "Pretty Good Privacy",
+        #the Swiss Army knife of encryption 
+        #Uses symmetric encryption (for data) and asymmetric encryption (for key exchange) plus hashing, a little of everything
+        #If you're paranoid about emails and files like embarassing selfies, PGP is your bestie
         "Web of Trust"
+        #AKA Trust the friend of your friend's friend
+        #Alternative to PKI that uses decentralized trust model for verifying authorities, because who needs real authority?
+        #It's like a cryptographic commune. Users vouch for each other's keys, building a circle of trust like a digital secret societyrew 
     ],
     "Misc. Attacks":[
         "DHCP Starvation",
