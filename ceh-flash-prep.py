@@ -21,7 +21,6 @@ concepts = {
         #Built on prime numbers so big, even your calculator's scared
         #SSl/TLS, digital certs, signing things people knows it's legit
         "Diffie-Hellman",
-
         "Message Digest Functions",
         #Hash is out
         #Produces a little 'hash' of your data so you can say 'Ya nothin changed'. Like a digital fingerprint
@@ -70,8 +69,28 @@ concepts = {
     ],
     "Misc. Attacks":[
         "DHCP Starvation",
+        #Network attack that exhausts all available IP addresses of a DHCP server, preventing it from assigning new ones.
+        #Like a pizza party where a jerk shows up and steals all the slices so no one else can have any.
+        #The attacker spams your DHCP server with fake requests with spoofed MAC addys
+        #The DHCP server, bless its trusting little heart, hands out all its IPs, leaving nothing for the good kids.
+        #If you're the bad guy (which you aren't, right?), you'd use Yersinia or DHCPig. Great names, terrible intentions.
+        #Countermeasures: 
+        #Slap port security on your switches like its duct tape to a leaky pipe to limit the number of MAC addresses per port.
+        #Use DHCP snooping to filter out the baddies in DHCP traffic.
+        #Segregate DHCP traffic using VLANs so the chaos is contained.
         "STP Attack",
+        #Spanning Tree Protocol Attack, the 'I'm the captain now of your network' move
+        #STP keeps your network from tying itself in knots. An STP attack is where a hacker jumps in and says I'm in charge now by disrupting the topology of a network
+        #The attacker sends out BPDUs (Bridge Protocol Data Units) claming to be the root bridge or the central switch in STP topology (aka STP royalty)
+        #If it is successful, everyone believes them because switches are gullible
+        #Traffic then starts to go through the attacker's device. Cue MITM attacks, sniffing, DoS, you know, all the bad stuff.
         "aLTEr Attack"
+        #LTE, but make it evil
+        #LTE (long-term evolution, the thing that keeps your phone from being useless) isn't perfect
+        #This attack pokes holes in its user-plane encryption, letting hackers play peekaboo with your data
+        #Targets mobile networks because hackers can't resist a juicy LTE connection
+        #Result? Phishing, stolen creds, surveillance--basically a hacker's wet dream
+
     ],
     "Basics":[
         "Info Sec",
