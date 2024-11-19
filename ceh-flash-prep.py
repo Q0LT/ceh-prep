@@ -109,6 +109,49 @@ concepts = {
         "Continual/Adaptive Securrity Strategy",
         "Threat Intelligence Lifecycle"
     ],
+    "Windows_auth_protocols":[
+        "SAM Database",
+        #Like a password vault sans sexy user interface, it stores hashed passwords for local accounts tucked away like your deepest darkest secrets
+        #Hiding out at C:\Windows\System32\config\SAM
+        #SYSKEY adds an ecryption layer, which sounds great until hackers boot from another OS 
+        #Common exploit techniques include LSASS memory dumping, Pass-the-Hash, and other hacker party tricks
+        #Pro Tip for Bad Guys™: Tools like Mimikatz or LSASS memory dumping make SAM databases spill their guts
+        "NTLM (NT LAN Manager) Authentication",
+        #Windows login bouncer from the '90s
+        #Challenge response authentication protocol
+        #Uses hashed credentials, client sends the hash of the password
+        #Vulnerable to Pass-the-Hash (PtH) and relay attacks, and lacks modern encryption and mutual authentication
+        #Switch to Kerberos! Turn on SMB signing to make relays harder!
+        "Kerberos Authentication",
+        #The one with the tickets, Kerberos is the new hotness
+        #Uses tickets to allow access to network services. It's like a Disneyland fast pass, no waiting in line (if you're legit)
+        #Mutual authentication is kinda its thing
+        #It uses symmetric key cryptography and a trusted third-party Key Distribution Center (KDC) that acts like Willy Wonka, handing out Golden Tickets (TGT)
+        #Encrypted, mutual authentication, and makes NTLM look like a loser
+        #Watch out for Kerberooasting, where hackers request service tickets for accounts with weak passwords
+    ],
+    "Password Attacks":[
+        "Non-Electronic Password Attacks",
+        #Physical or social engineering techniques, shoulder surfin like a professional creep, or dumpster divin like a raccoon with a hacking fetish
+        "Active Online Attacks",
+        #Direct interaction, no consent!
+        #Try every word in Webster's dictionary or smash every key until it works
+        #Brute force, dictionary attacks, and credentials stuffing
+        "Passive Online Attacks",
+        #No active interaction, more like eavesdropping with you're best bud Wireshark
+        #If the password is in plaintext, congrats it's mine now
+        "Offline Attacks",
+        #Grab the password hash database, then crack it offline
+        #Think rainbow tables, dictionary attacks or brute force on steriods
+        "Password Salting",
+        #Add random junk to passwords before hashing
+        #If two users pick 'password123' (ugh) their hashes will be different
+        #Salt values are stored with the hash, and both are required for verification
+    ],
+    "Buffer Overflow":[
+        "Buffer Overflow",
+        
+    ],
     "Laws":[
         "PCI DSS", 
         #It’s like the bodyguard for payment data, making sure companies don’t treat your credit card numbers like soggy Taco Bell receipts. 
