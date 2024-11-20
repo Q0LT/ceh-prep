@@ -150,6 +150,22 @@ concepts = {
     ],
     "Buffer Overflow":[
         "Buffer Overflow",
+        #Occurs when a program gets more data than it can handle, and starts scribbling over adjacent memory space like a toddler with crayons
+        #Can lead to crashes, arbitrary code execution, or privilege escalation
+        "Stack-based Buffer Overflow",
+        #Happens in the stack (fixed memory region for function calls and local variables) 
+        #Attackers overwrite the return address stored on the stack to make the program do their bidding
+        #Tools like Metasploit turn this into a hacking buffet 
+        "Heap-based Buffer Overflow",
+        #Occurs in the heap (dynamically allocated memory region) 
+        #Hackers mess with memory structures to redirect the program's flow. Complex, yes, but also effective
+        "Return-Oriented Programming (ROP) Attacks",
+        #One kind of fancy schmany payload hackers deliver through buffer overflows, like hiding a rattlesnake in a bouqet of roses
+        #Advanced buffer overflow technique that reuses existing code (gadgets) already in the program's memory, AKA hiding something dangerous inside something seemingly harmless
+    ],
+    "Bluetooth Attacks":[
+        "Bluesnarfing",
+        #Hackers use your Bluetooth connection to steal your data without authorization, its a Bluetooth pickpocket
         
     ],
     "Laws":[
