@@ -1,7 +1,7 @@
 import random
 
 concepts = {
-    "Cryptography": [
+    "Cryptography and Encryption": [
         "Symmetric Cryptography",
         #One key, two key, same key to rule them all! 
         #Encryption/Decryption twins
@@ -65,9 +65,17 @@ concepts = {
         "Web of Trust"
         #AKA Trust the friend of your friend's friend
         #Alternative to PKI that uses decentralized trust model for verifying authorities, because who needs real authority?
-        #It's like a cryptographic commune. Users vouch for each other's keys, building a circle of trust like a digital secret societyrew 
+        #It's like a cryptographic commune. Users vouch for each other's keys, building a circle of trust like a digital secret society
+        "Twofish Encryption",
+        #Not the top of the food chain, but still has plenty of street cred
+        #Symmetric block ciper, but not as popular as AES
+        #Uses a 128-bit block size and key size up to 256 bits
+        #Super secure, and flexible, works on everything from your phone to a potato powered computer (probably?)
+        "Trust Platform Module", 
+        #The brainy bounce of cryptograpy baby!
+        #It's a hardware chip that hoards encryptions keys and passwords. Like a Fort Knox cookie jar, except the cookies are your juicy secrets
     ],
-    "Misc. Attacks":[
+    "Web adn Network Attacks":[
         "DHCP Starvation",
         #Network attack that exhausts all available IP addresses of a DHCP server, preventing it from assigning new ones.
         #Like a pizza party where a jerk shows up and steals all the slices so no one else can have any.
@@ -84,18 +92,61 @@ concepts = {
         #The attacker sends out BPDUs (Bridge Protocol Data Units) claming to be the root bridge or the central switch in STP topology (aka STP royalty)
         #If it is successful, everyone believes them because switches are gullible
         #Traffic then starts to go through the attacker's device. Cue MITM attacks, sniffing, DoS, you know, all the bad stuff.
-        "aLTEr Attack"
+        "aLTEr Attack",
         #LTE, but make it evil
         #LTE (long-term evolution, the thing that keeps your phone from being useless) isn't perfect
         #This attack pokes holes in its user-plane encryption, letting hackers play peekaboo with your data
         #Targets mobile networks because hackers can't resist a juicy LTE connection
         #Result? Phishing, stolen creds, surveillance--basically a hacker's wet dream
+        "Clickjacking Attack",
+        #Hackers trick you into clicking on hidden elements on a webpage by overlaying them on top of legit ones
+        #It turns your innocent click into a nightmare. You think you're clicking on a cute cat meme, but it's really malware
+        #All of a sudden your webcam is on, money is getting transferred, and you're left saying "I just wanted to see the cute cat meme!"
+        #Countermeasures: HTTP headers like X-Frame-Options, Content Security Policy, and frame-busting scripts and Content Security Policy to control what can be loaded in a frame
+        "Watering Hole Attack",
+        #Hackers compromise a site everyone loves and infects you when you visit it. Why? Because they know you can't resist visiting it, classic toxic relatsh vibes
+        #It delivers malware, data theft, and a sinking feeling everytime you see your favorite site
+        #Monitor popular sites and slap on some endpoint protection
+        "Wardrive Attack",
+        #Drive-by hacking, just you and your buds cruising for unsecured networks
+        #Use WPA3 encryption, and  hide SSIds
+        "VAWTRAK Attack",
+        #Financial Data's Worst Nightmare
+        #Sophisticated banking trojan designed to sdteal fincial data, like credentials and credit card info
+        #Malware that intercepts browsers sessions and disables antivirus, all to get into your sweet, sweet bank account
 
     ],
     "Basics":[
         "Info Sec",
-        "Elements of Info Sec",
+        #Protecting info from unauthorized access, use, disclosure, disruption, modification, or destruction (think CIA TRIAD, the holy trinity of info sec)
+        "Confidentiality",
+        #Access only for those authorized to have access
+        #No peeking, Karen!
+        "Integrity",
+        #Maintains accuracy and consistency of data
+        "Availability",
+        #Data is available when you need it
+        "Authentication",
+        #Verifying the identity of users
+        #Who are you? Prove it!
+        "Accountability",
+        #Loggin and monitorin user actions for traceability, logs don't lie
+        #AKA We're watching, always watching
+        "Non-repudiation",
+        #Prevents denial of actions
+        #Can't say, "It Wasn't Me" Shaggy style
         "5 Classifications of Attack",
+        #Passive, Active, Insider, Close-in, Distribution
+        "Passive Attack",
+        #No direct interaction, no altering the system or data, remaining undetected
+        #This is the stalker nerd of cyberattacks lurking in the shadows, watching, listening, just creepin around
+        #Eavesdropping, traffic analysis, and sniffing are its jam
+        "Active Attack",
+        #Direct interaction, loud, messy, very noticable, like a cyber-bull in a china shop
+        #DoS, Malware....
+        "Insider Attack",
+        "Close-in Attack",
+        "Distribution Attack",
         "Categories of Info War",
         "CEH Methodology",
         "Cyber Kill Chain Methodology Phases",
@@ -166,7 +217,57 @@ concepts = {
     "Bluetooth Attacks":[
         "Bluesnarfing",
         #Hackers use your Bluetooth connection to steal your data without authorization, its a Bluetooth pickpocket
-        
+        #Goodbye contacts, email, and shameless selfies, hello identity theft
+        "Bluebugging",
+        #When hackers play puppetmaster
+        #Hackers hijack your bluetooth device to make calls, send messages, and generally live your digital life without you
+        #Can result in data theft, surveillance, and general chaos
+        "Bluejacking",
+        #Hackers send unsolicited messages or files to nearby Bluetooth devices, spamming people never goes out of style!
+        #Annoying but harmless, unless you fall for phishing, in which case, you're in trouble
+        #Set Bluetooth to non-discoverable mode 
+        "Bluesmacking",
+        #Bluetooth DoS. Device flooded with bad packets unitl it crashes. 
+        #It's a temporary crash but enough to ruin your Bluetooth groove
+    ],
+    "Network Attacks":[
+        "VLAN Hopping",
+        #Network Ninja, Sneak Attack
+        #Hackers bypass network segmentation and pop into other VLANS like an uninvited party guest
+        #It exploits VLAN tagging protocols
+        #Techniques? Switch spoofing and double tagging
+        #Switch Spoofing: Pretend to be a trunking switch
+        #Double tagging: Tricks switches into sending packets where they dont belong (unauthorized VLANs) by adding two VLAN tags to the packets.
+        "DNS Cache Poisoning",
+        #Hackers inject bogus entries into DNS servers, redirecting users to evil sites
+        #Instead of Google, you get EvilHackerDaddy.com, population: you
+        #Use DNSSEC and keep your server software updated, unless you like living dangerously and getting phished
+    ],
+    "Cloud Computing":[
+        "Cloud Computing",
+        #Where your data floats in fancy servers
+        #It's a computing paradigm where resources like servers, storage, apps, are delivered on a pay-as-you-go basis
+        "Public cloud",
+        #Cloud couch surfing
+        #Think Google Cloud, AWS, Azure
+        #Resources here are shared, you get the benefits of cloud computing without the commitment
+        #Cheap and scalable, but security/privacy? Meh, not great
+        "Private cloud",
+        #The luxury penthouse in the clouds
+        #All resources are dedicated to a single organization, making it a control freak's wet dream
+        #Super secure, but also super expensive
+        "Hybrid cloud",
+        #Mullet cloud, business up front, party in the back
+        #Part public, part private, all benefits
+        #Allows data and apps to be shared between clouds, giving you the best of both worlds
+        #Perfect if you want locked down security with scalable swagger
+        #This is needing to keep your secrets under wraps while also flexing on a budget
+        "Community cloud",
+        #Cloud for the people, by the people
+        #The neighborhood potluck
+        #Shared by organizations with similar needs, like government, healthcare, or finance
+        #Promotes collaboration and compliance. Team work makes the dream work, but compliance keeps the dream legal!
+
     ],
     "Laws":[
         "PCI DSS", 
@@ -190,6 +291,12 @@ concepts = {
         #Gives users right to be forgotten, and breaches should be reported before you can finish saying 'oops'(72 hours)  
         "DPA 2018"
         #GDPR but with extra British flair for post-Brexit life
+    ],
+    "Cyber Threat Tactics":[
+        "Domain Generation Algorithm (DGA)",
+        #A technique used by mallware to create a gazillion domain names for its C&C servers, making them harder to block
+        #Malware stays connected no matter how many domains you take down
+        #Peep threat intelligence feeds to keep up and use DNS filtering to stay ahead
     ],
 }
 
