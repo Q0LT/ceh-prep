@@ -1,6 +1,196 @@
 import random
 
 concepts = {
+    "Basics":[
+        "Info Sec",
+        #Protecting info from unauthorized access, use, disclosure, disruption, modification, or destruction (think CIA TRIAD, the holy trinity of info sec)
+        "Confidentiality",
+        #Access only for those authorized to have access
+        #No peeking, Karen!
+        "Integrity",
+        #Maintains accuracy and consistency of data
+        "Availability",
+        #Data is available when you need it
+        "Authentication",
+        #Verifying the identity of users
+        #Who are you? Prove it!
+        "Accountability",
+        #Loggin and monitorin user actions for traceability, logs don't lie
+        #AKA We're watching, always watching
+        "Non-repudiation",
+        #Prevents denial of actions
+        #Can't say, "It Wasn't Me" Shaggy style
+        "5 Classifications of Attack",
+        #Passive, Active, Insider, Close-in, Distribution
+        "Passive Attack",
+        #No direct interaction, no altering the system or data, remaining undetected
+        #This is the stalker nerd of cyberattacks lurking in the shadows, watching, listening, just creepin around
+        #Eavesdropping, traffic analysis, and sniffing are its jam
+        "Active Attack",
+        #Direct interaction, loud, messy, very noticable, like a cyber-bull in a china shop
+        #DoS, Malware....
+        "Insider Attack",
+        #Perpetrated by authorized users, like Todd from HR, who's been holding a grudge because I keep eating his yogurt
+        "Close-in Attack",
+        #External adversaries and wannabe hackers sliding into your DMs phishin' ya and exploitin' ya
+        "Distribution Attack",
+        "Categories of Info War",
+        #Offsensive: Cyber smackdowns, disruptin', disablin' and destroyin' adversary opertions
+        #Defensive: Cyber karate, protectin' and defendin' your systems
+        #Psychological: Mind games. Using info to influence, confuse, and deceive public opinion and morale
+        #Cyber espionage: Spying, stealin' secrets, and gatherin' intel. High-tech sneaky-peeky
+        #Propaganda: Fake news, digital and global. Spreading lies and misinformation
+        "CEH Methodology",
+        #Recon: Stalker mode, on. 
+        #Scanning: Poke and prod to find live hosts, open ports, services, and vulnerabilities
+        #Gaining Access: Kickin down that digital door, like cyber SWAT
+        #Maintaining Access: Establish persistence. Come in the backdoor, move in, rearrange the furniture, leave your toothbrush
+        #Covering Tracks: Be a ghost, they don't have fingerprints.
+        "Cyber Kill Chain Methodology Phases",
+        #Recon, Weaponization, Delivery, Exploitation, Installation, Command and Control(C2, C&C), Actions on Objectives
+        #Weaponization: Build-a-bomb, but cyber style
+        #Delivery: Knock, Knock, it's payload o'clock
+        #Exploitation: Activating Gotcha' mode
+        #Installation: Sets up camp like mi casa su casa
+        #C2: Enabling remote access/control. Dance, puppet, dance!
+        #Actions on Objectives: Achieving the goal. 
+        "TTPs",
+        #Tactics, Techniques, Procedures
+        #Tactics: Big picture, the plan, the strategy. High level descriptions of adversay behavior
+        #Techniques: The how to, the method to achieve your goals, like phishing or a sending malicious cat meme
+        #Procedures: Step by step execution. step 1, step 2, step 3, profit
+        #TTPs are like the recipe for a cyberattack, the ingredients, the steps, and the final product
+        #Knowing your enemy is half the battle
+        "Adversary Behavorial Identification",
+        "Indicators of Compromise",
+        "Mitre Att&Ck Framework",
+        "Diamond Model of Intrusion Analysis and Elements",
+        "Information Assurance",
+        "Defense in Depth",
+        "Continual/Adaptive Securrity Strategy",
+        "Threat Intelligence Lifecycle"
+    ],
+    "Laws":[
+        "PCI DSS", 
+        #It’s like the bodyguard for payment data, making sure companies don’t treat your credit card numbers like soggy Taco Bell receipts. 
+        #If you’re storing credit info like a psycho, this is the “Hey, you gotta stop that” protocol.
+        "ISO/IEC 27001:2013",
+        #International gold star for olks who keps secrets
+        "HIPPA",
+        #Hospitals and clinics have to keep your records under wraps—or else! 
+        "SOX",
+        #Tattletale mechanism for keeping execs honest about their bank statements
+        #Made for catching number-fudgers and protecting shareholders and the public from accounting errors and fraudulent pracices, primarily in publicly traded companies
+        "DMCA",
+        #DMCA’s the law that says, “Hey, quit pirating,” but all it does is make pirates more creative.
+        #Download comes with a “cease and desist” letter. 
+        "FISMA",
+        #Don't Mess With Uncle Sam's Computer Files Act
+        #All about keeping federal information systems and safeguard data handled by federal agencies and their contractors safer than the recipe for Coca-Cola
+        "GDPR",
+        #EU saying we know what you're up to Google and we're not having it.
+        #Gives users right to be forgotten, and breaches should be reported before you can finish saying 'oops'(72 hours)  
+        "DPA 2018"
+        #GDPR but with extra British flair for post-Brexit life
+    ],
+    "Port and Portocols":[
+        "Well-Known Ports",
+        #0-1023
+        #Celebrity ports, the A-listers, the famous protocols
+        "Registered Ports",
+        #1024-49151
+        #Middle children of the port family, important but nobody is making them famous by any means
+        "Dynamic Ports",
+        #49152-65535
+        #Temporary ports used for server communication, these are like the one-night stands of the port world, here today, gone tomorrow, don't even remember their names
+        "FTP (Data Transer)",
+        #File Transfer Protocol, 20
+        #Transfers files between a client and server
+        "FTP (Control Commands)",
+        #File Transfer Protocol, 21
+        #Sends commands for file transfers
+        #It's like the bossy older sibling of port 20, telling it what to do
+        "SSH/SCP/SFTP",
+        #Secure Shell for remote access and file transfer, 22
+        "Telnet",
+        #Unsecure remote access, 23
+        "SMTP",
+        #Simple Mail Transfer Protocol, 25
+        #Sends emails between servers
+        "DNS",
+        #Domain Name System, 53
+        #Converts domain anmes to IP addresses because we're too dumb to remember numbers
+        "DHCP",
+        #Dynamic Host Configuration Protocol, 67-68
+        #Assigns IP addresses dynamically on a network
+        #You get an IP! And you get an IP!
+        "TFTP",
+        #Trivial File Transfer Protocol, 69
+        "HTTP",
+        #Hypertext Transfer Protocol, 80
+        #Delivers websites to the people, probably the reason you're reading this right now
+        "POP3",
+        #Post Office Protocol version 3, 110
+        #Retrieves emails you'll ignore from a server 
+        "NTP",
+        #Network Time Protocol, 123
+        #Keeps all devices in syncy-sync, because time is important, and definitely not a social construct
+        "RPC/DCOM",
+        #Remote Procedure Call, 135
+        #Manages remote procedure calls
+        "NetBios",
+        #Network Basic Input/Output System, 137-139
+        #Basic netwrorking for Windows
+        "IMAP",
+        #Internet Message Access Protocol, 143
+        #Lets you read emails without downloading them
+        "SNMP",
+        #Simple Network Management Protocol, 161
+        #Keeps an eye on network devices like a nosy little neighbor
+        "LDAP",
+        #Lightweight Directory Access Protocol, 389
+        #Someones gotta manages user directories, LDAP does
+        "HTTPS",
+        #Hypertext Transfer Protocol Secure, 443
+        #Secured HTTP
+        #HTTP but better dressed and concerned about security
+        "SMB",
+        #Server Message Block, 445
+        #Shares files and printers
+        #The office workhorse
+        "Syslog",
+        #System Logging Protocol, 514
+        #Collects system logs from devices
+        "SMTP (Secure)",
+        #Simple Mail Transfer Protocol, 587
+        #Sends secure emails
+        #Deprecated but still somehow exists
+        "LDAP (SSL/TLS)",
+        #Lightweight Directory Access Protocol, 636
+        #LDAP with a security blanket
+        "FTPS",
+        #File Transfer Protocol Secure, 989-990
+        #FTP, glowed up
+        "MSSQL",
+        #Microsoft SQL Server, 1433
+        #Everyone needs a friend, this port talks to Microsoft SQL Servers so it doesn't get lonely
+        "Oracle Database",
+        #1521
+        #The oracle of databases
+        "PPTP",
+        #Point-to-Point Tunneling Protocol, 1723
+        #Creates a VPN
+        "MySQL",
+        #3306
+        #MySQL databases chatting like one big nerdy group chat
+        "RDP",
+        #Remote Desktop Protocol, 3389
+        #VIP pass to remote desktops
+        "VNC",
+        #Virtual Network Computing, 5900
+        #Remote desktop for the people
+
+    ],
     "Cryptography and Encryption": [
         "Symmetric Cryptography",
         #One key, two key, same key to rule them all! 
@@ -75,91 +265,6 @@ concepts = {
         #The brainy bounce of cryptograpy baby!
         #It's a hardware chip that hoards encryptions keys and passwords. Like a Fort Knox cookie jar, except the cookies are your juicy secrets
     ],
-    "Web adn Network Attacks":[
-        "DHCP Starvation",
-        #Network attack that exhausts all available IP addresses of a DHCP server, preventing it from assigning new ones.
-        #Like a pizza party where a jerk shows up and steals all the slices so no one else can have any.
-        #The attacker spams your DHCP server with fake requests with spoofed MAC addys
-        #The DHCP server, bless its trusting little heart, hands out all its IPs, leaving nothing for the good kids.
-        #If you're the bad guy (which you aren't, right?), you'd use Yersinia or DHCPig. Great names, terrible intentions.
-        #Countermeasures: 
-        #Slap port security on your switches like its duct tape to a leaky pipe to limit the number of MAC addresses per port.
-        #Use DHCP snooping to filter out the baddies in DHCP traffic.
-        #Segregate DHCP traffic using VLANs so the chaos is contained.
-        "STP Attack",
-        #Spanning Tree Protocol Attack, the 'I'm the captain now of your network' move
-        #STP keeps your network from tying itself in knots. An STP attack is where a hacker jumps in and says I'm in charge now by disrupting the topology of a network
-        #The attacker sends out BPDUs (Bridge Protocol Data Units) claming to be the root bridge or the central switch in STP topology (aka STP royalty)
-        #If it is successful, everyone believes them because switches are gullible
-        #Traffic then starts to go through the attacker's device. Cue MITM attacks, sniffing, DoS, you know, all the bad stuff.
-        "aLTEr Attack",
-        #LTE, but make it evil
-        #LTE (long-term evolution, the thing that keeps your phone from being useless) isn't perfect
-        #This attack pokes holes in its user-plane encryption, letting hackers play peekaboo with your data
-        #Targets mobile networks because hackers can't resist a juicy LTE connection
-        #Result? Phishing, stolen creds, surveillance--basically a hacker's wet dream
-        "Clickjacking Attack",
-        #Hackers trick you into clicking on hidden elements on a webpage by overlaying them on top of legit ones
-        #It turns your innocent click into a nightmare. You think you're clicking on a cute cat meme, but it's really malware
-        #All of a sudden your webcam is on, money is getting transferred, and you're left saying "I just wanted to see the cute cat meme!"
-        #Countermeasures: HTTP headers like X-Frame-Options, Content Security Policy, and frame-busting scripts and Content Security Policy to control what can be loaded in a frame
-        "Watering Hole Attack",
-        #Hackers compromise a site everyone loves and infects you when you visit it. Why? Because they know you can't resist visiting it, classic toxic relatsh vibes
-        #It delivers malware, data theft, and a sinking feeling everytime you see your favorite site
-        #Monitor popular sites and slap on some endpoint protection
-        "Wardrive Attack",
-        #Drive-by hacking, just you and your buds cruising for unsecured networks
-        #Use WPA3 encryption, and  hide SSIds
-        "VAWTRAK Attack",
-        #Financial Data's Worst Nightmare
-        #Sophisticated banking trojan designed to sdteal fincial data, like credentials and credit card info
-        #Malware that intercepts browsers sessions and disables antivirus, all to get into your sweet, sweet bank account
-
-    ],
-    "Basics":[
-        "Info Sec",
-        #Protecting info from unauthorized access, use, disclosure, disruption, modification, or destruction (think CIA TRIAD, the holy trinity of info sec)
-        "Confidentiality",
-        #Access only for those authorized to have access
-        #No peeking, Karen!
-        "Integrity",
-        #Maintains accuracy and consistency of data
-        "Availability",
-        #Data is available when you need it
-        "Authentication",
-        #Verifying the identity of users
-        #Who are you? Prove it!
-        "Accountability",
-        #Loggin and monitorin user actions for traceability, logs don't lie
-        #AKA We're watching, always watching
-        "Non-repudiation",
-        #Prevents denial of actions
-        #Can't say, "It Wasn't Me" Shaggy style
-        "5 Classifications of Attack",
-        #Passive, Active, Insider, Close-in, Distribution
-        "Passive Attack",
-        #No direct interaction, no altering the system or data, remaining undetected
-        #This is the stalker nerd of cyberattacks lurking in the shadows, watching, listening, just creepin around
-        #Eavesdropping, traffic analysis, and sniffing are its jam
-        "Active Attack",
-        #Direct interaction, loud, messy, very noticable, like a cyber-bull in a china shop
-        #DoS, Malware....
-        "Insider Attack",
-        "Close-in Attack",
-        "Distribution Attack",
-        "Categories of Info War",
-        "CEH Methodology",
-        "Cyber Kill Chain Methodology Phases",
-        "TTPs",
-        "Adversary Behavorial Identification",
-        "Indicators of Compromise",
-        "Mitre Att&Ck Framework",
-        "Diamond Model of Intrusion Analysis and Elements",
-        "Information Assurance",
-        "Defense in Depth",
-        "Continual/Adaptive Securrity Strategy",
-        "Threat Intelligence Lifecycle"
-    ],
     "Windows_auth_protocols":[
         "SAM Database",
         #Like a password vault sans sexy user interface, it stores hashed passwords for local accounts tucked away like your deepest darkest secrets
@@ -180,6 +285,82 @@ concepts = {
         #It uses symmetric key cryptography and a trusted third-party Key Distribution Center (KDC) that acts like Willy Wonka, handing out Golden Tickets (TGT)
         #Encrypted, mutual authentication, and makes NTLM look like a loser
         #Watch out for Kerberooasting, where hackers request service tickets for accounts with weak passwords
+    ],
+     "Malware":[
+        "VAWTRAK Attack",
+        #Financial Data's Worst Nightmare
+        #Sophisticated banking trojan designed to sdteal fincial data, like credentials and credit card info
+        #Malware that intercepts browsers sessions and disables antivirus, all to get into your sweet, sweet bank account
+        "Logic Bomb",
+    ],
+    "Web Attacks":[
+        "Clickjacking Attack",
+        #Hackers trick you into clicking on hidden elements on a webpage by overlaying them on top of legit ones
+        #It turns your innocent click into a nightmare. You think you're clicking on a cute cat meme, but it's really malware
+        #All of a sudden your webcam is on, money is getting transferred, and you're left saying "I just wanted to see the cute cat meme!"
+        #Countermeasures: HTTP headers like X-Frame-Options, Content Security Policy, and frame-busting scripts and Content Security Policy to control what can be loaded in a frame
+        "Watering Hole Attack",
+        #Hackers compromise a site everyone loves and infects you when you visit it. Why? Because they know you can't resist visiting it, classic toxic relatsh vibes
+        #It delivers malware, data theft, and a sinking feeling everytime you see your favorite site
+        #Monitor popular sites and slap on some endpoint protection
+    ],
+    "Network Attacks":[
+        "DHCP Starvation",
+        #Network attack that exhausts all available IP addresses of a DHCP server, preventing it from assigning new ones.
+        #Like a pizza party where a jerk shows up and steals all the slices so no one else can have any.
+        #The attacker spams your DHCP server with fake requests with spoofed MAC addys
+        #The DHCP server, bless its trusting little heart, hands out all its IPs, leaving nothing for the good kids.
+        #If you're the bad guy (which you aren't, right?), you'd use Yersinia or DHCPig. Great names, terrible intentions.
+        #Countermeasures: 
+        #Slap port security on your switches like its duct tape to a leaky pipe to limit the number of MAC addresses per port.
+        #Use DHCP snooping to filter out the baddies in DHCP traffic.
+        #Segregate DHCP traffic using VLANs so the chaos is contained.
+        "STP Attack",
+        #Spanning Tree Protocol Attack, the 'I'm the captain now of your network' move
+        #STP keeps your network from tying itself in knots. An STP attack is where a hacker jumps in and says I'm in charge now by disrupting the topology of a network
+        #The attacker sends out BPDUs (Bridge Protocol Data Units) claming to be the root bridge or the central switch in STP topology (aka STP royalty)
+        #If it is successful, everyone believes them because switches are gullible
+        #Traffic then starts to go through the attacker's device. Cue MITM attacks, sniffing, DoS, you know, all the bad stuff.
+        "Wardrive Attack",
+        #Drive-by hacking, just you and your buds cruising for unsecured networks
+        #Use WPA3 encryption, and  hide SSIds
+        "VLAN Hopping",
+        #Network Ninja, Sneak Attack
+        #Hackers bypass network segmentation and pop into other VLANS like an uninvited party guest
+        #It exploits VLAN tagging protocols
+        #Techniques? Switch spoofing and double tagging
+        #Switch Spoofing: Pretend to be a trunking switch
+        #Double tagging: Tricks switches into sending packets where they dont belong (unauthorized VLANs) by adding two VLAN tags to the packets.
+        "DNS Cache Poisoning",
+        #Hackers inject bogus entries into DNS servers, redirecting users to evil sites
+        #Instead of Google, you get EvilHackerDaddy.com, population: you
+        #Use DNSSEC and keep your server software updated, unless you like living dangerously and getting phished
+        "Wireless Jamming",
+
+    ],
+    "Mobile Attacks":[
+        "aLTEr Attack",
+        #LTE, but make it evil
+        #LTE (long-term evolution, the thing that keeps your phone from being useless) isn't perfect
+        #This attack pokes holes in its user-plane encryption, letting hackers play peekaboo with your data
+        #Targets mobile networks because hackers can't resist a juicy LTE connection
+        #Result? Phishing, stolen creds, surveillance--basically a hacker's wet dream
+    ],
+     "Bluetooth Attacks":[
+        "Bluesnarfing",
+        #Hackers use your Bluetooth connection to steal your data without authorization, its a Bluetooth pickpocket
+        #Goodbye contacts, email, and shameless selfies, hello identity theft
+        "Bluebugging",
+        #When hackers play puppetmaster
+        #Hackers hijack your bluetooth device to make calls, send messages, and generally live your digital life without you
+        #Can result in data theft, surveillance, and general chaos
+        "Bluejacking",
+        #Hackers send unsolicited messages or files to nearby Bluetooth devices, spamming people never goes out of style!
+        #Annoying but harmless, unless you fall for phishing, in which case, you're in trouble
+        #Set Bluetooth to non-discoverable mode 
+        "Bluesmacking",
+        #Bluetooth DoS. Device flooded with bad packets unitl it crashes. 
+        #It's a temporary crash but enough to ruin your Bluetooth groove
     ],
     "Password Attacks":[
         "Non-Electronic Password Attacks",
@@ -214,35 +395,6 @@ concepts = {
         #One kind of fancy schmany payload hackers deliver through buffer overflows, like hiding a rattlesnake in a bouqet of roses
         #Advanced buffer overflow technique that reuses existing code (gadgets) already in the program's memory, AKA hiding something dangerous inside something seemingly harmless
     ],
-    "Bluetooth Attacks":[
-        "Bluesnarfing",
-        #Hackers use your Bluetooth connection to steal your data without authorization, its a Bluetooth pickpocket
-        #Goodbye contacts, email, and shameless selfies, hello identity theft
-        "Bluebugging",
-        #When hackers play puppetmaster
-        #Hackers hijack your bluetooth device to make calls, send messages, and generally live your digital life without you
-        #Can result in data theft, surveillance, and general chaos
-        "Bluejacking",
-        #Hackers send unsolicited messages or files to nearby Bluetooth devices, spamming people never goes out of style!
-        #Annoying but harmless, unless you fall for phishing, in which case, you're in trouble
-        #Set Bluetooth to non-discoverable mode 
-        "Bluesmacking",
-        #Bluetooth DoS. Device flooded with bad packets unitl it crashes. 
-        #It's a temporary crash but enough to ruin your Bluetooth groove
-    ],
-    "Network Attacks":[
-        "VLAN Hopping",
-        #Network Ninja, Sneak Attack
-        #Hackers bypass network segmentation and pop into other VLANS like an uninvited party guest
-        #It exploits VLAN tagging protocols
-        #Techniques? Switch spoofing and double tagging
-        #Switch Spoofing: Pretend to be a trunking switch
-        #Double tagging: Tricks switches into sending packets where they dont belong (unauthorized VLANs) by adding two VLAN tags to the packets.
-        "DNS Cache Poisoning",
-        #Hackers inject bogus entries into DNS servers, redirecting users to evil sites
-        #Instead of Google, you get EvilHackerDaddy.com, population: you
-        #Use DNSSEC and keep your server software updated, unless you like living dangerously and getting phished
-    ],
     "Cloud Computing":[
         "Cloud Computing",
         #Where your data floats in fancy servers
@@ -269,32 +421,9 @@ concepts = {
         #Promotes collaboration and compliance. Team work makes the dream work, but compliance keeps the dream legal!
 
     ],
-    "Laws":[
-        "PCI DSS", 
-        #It’s like the bodyguard for payment data, making sure companies don’t treat your credit card numbers like soggy Taco Bell receipts. 
-        #If you’re storing credit info like a psycho, this is the “Hey, you gotta stop that” protocol.
-        "ISO/IEC 27001:2013",
-        #International gold star for olks who keps secrets
-        "HIPPA",
-        #Hospitals and clinics have to keep your records under wraps—or else! 
-        "SOX",
-        #Tattletale mechanism for keeping execs honest about their bank statements
-        #Made for catching number-fudgers and protecting shareholders and the public from accounting errors and fraudulent pracices, primarily in publicly traded companies
-        "DMCA",
-        #DMCA’s the law that says, “Hey, quit pirating,” but all it does is make pirates more creative.
-        #Download comes with a “cease and desist” letter. 
-        "FISMA",
-        #Don't Mess With Uncle Sam's Computer Files Act
-        #All about keeping federal information systems and safeguard data handled by federal agencies and their contractors safer than the recipe for Coca-Cola
-        "GDPR",
-        #EU saying we know what you're up to Google and we're not having it.
-        #Gives users right to be forgotten, and breaches should be reported before you can finish saying 'oops'(72 hours)  
-        "DPA 2018"
-        #GDPR but with extra British flair for post-Brexit life
-    ],
     "Cyber Threat Tactics":[
         "Domain Generation Algorithm (DGA)",
-        #A technique used by mallware to create a gazillion domain names for its C&C servers, making them harder to block
+        #A technique used by malware to create a gazillion domain names for its C&C servers, making them harder to block
         #Malware stays connected no matter how many domains you take down
         #Peep threat intelligence feeds to keep up and use DNS filtering to stay ahead
     ],
