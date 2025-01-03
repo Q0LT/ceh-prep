@@ -331,10 +331,37 @@ concepts = {
         #Techniques? Switch spoofing and double tagging
         #Switch Spoofing: Pretend to be a trunking switch
         #Double tagging: Tricks switches into sending packets where they dont belong (unauthorized VLANs) by adding two VLAN tags to the packets.
-        "DNS Cache Poisoning",
+        "DNS Cache Poisoning", #AKA DNS Spoofing
         #Hackers inject bogus entries into DNS servers, redirecting users to evil sites
-        #Instead of Google, you get EvilHackerDaddy.com, population: you
-        #Use DNSSEC and keep your server software updated, unless you like living dangerously and getting phished
+        #Instead of Google, you get EvilHackerDaddy.com
+        #Use DNSSEC and keep your server software updated, unless you like living dangerously and getting phished\
+        "Domain Hijacking",
+        #Hackers got control of your domain by compromising your domain registrar account and changing ownership details
+        #Controls email, web traffic, DNS settings
+        "DNS Flood",
+        #Type of DDOS
+        #Botnets flood DNS queries, servers taps out
+        "DRDOS",#Distributed Reflection Denial of Service
+        #Exploits DNS resolvers
+        #Attacker sends spoofed (victim's ip) requests to open DNS resolvers
+        #Resolvers respond to the victim with DNS reponses, flooding them with traffic
+        #DNS server becomes the accomplice in an internet slap fight
+        "DNS Tunneling",
+        #Sneaky, sneaky, hacker smuggling data through DNS
+        #Uses DNS as a covert channet to transmit data
+        #Often for exfiltration, but can also be used for C&C
+        "DNS hijacking",
+        #Redirects traffic
+        #Unlike spoofing, hijacking changes settings on the DNS server itself
+        #So instead of going to legitgoodguys.com you end up at evilbadboys.com
+        "NXDOMAIN Attack", #404 on Steroids
+        #A DoS attack where hackers target DNS resolvers by flooding them for non-existent domains
+        #The resolver is like '404 bro, I can't find that' until it crashes
+        "Random Subdomain Attack", 
+        #A DoS, it queries for random subdomains of a domain to overwhelm the authoritative DNS 
+        "Phantom Domain Attack",#Ghost of Domains Past
+        #Hacker setup fake domains that never respond or respond super super slow
+        #Your DNS server waits like a fool for a response that never comes, just draining resources
         "Wireless Jamming",
 
     ],
