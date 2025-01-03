@@ -119,7 +119,7 @@ concepts = {
         #Sends emails between servers
         "DNS",
         #Domain Name System, 53
-        #Converts domain anmes to IP addresses because we're too dumb to remember numbers
+        #Converts domain names to IP addresses because we're too dumb to remember numbers
         "DHCP",
         #Dynamic Host Configuration Protocol, 67-68
         #Assigns IP addresses dynamically on a network
